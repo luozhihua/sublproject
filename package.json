@@ -1,0 +1,23 @@
+{
+  "name": "grunt-sublime",
+  "version": "1.0.0",
+  "description": "Open project with sublime via grunt, will init it if {project-name}.sublime-project not fond in project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luozhihua/grunt-sublime.git"
+  },
+  "keywords": [
+    "grunt",
+    "sublime-text"
+  ],
+  "author": "luozhihua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luozhihua/grunt-sublime/issues"
+  },
+  "homepage": "https://github.com/luozhihua/grunt-sublime"
+}
