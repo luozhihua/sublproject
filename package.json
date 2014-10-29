@@ -1,23 +1,44 @@
 {
-  "name": "grunt-sublime",
+  "name": "sublproject",
   "version": "1.0.0",
-  "description": "Open project with sublime via grunt, will init it if {project-name}.sublime-project not fond in project.",
+  "preferGlobal": "true",
+  "description": "Init current nodejs project for sublime-text, for easily to open it.",
   "main": "index.js",
+  "os":["linux"],
+  "bin": {
+    "sublproject": "./bin/sublproject"
+  },
   "scripts": {
-    "test": "grunt test"
+    "test": "NODE_ENV=test bash test/index.sh && NODE_ENV=test cd text && node main.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/luozhihua/grunt-sublime.git"
+    "url": "https://github.com/luozhihua/sublproject.git"
   },
   "keywords": [
     "grunt",
     "sublime-text"
   ],
+
+  "engines": {
+    "node": ">=0.10"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "example": "./examples"
+  },
+
   "author": "luozhihua",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luozhihua/grunt-sublime/issues"
+    "url": "https://github.com/luozhihua/sublproject/issues"
   },
-  "homepage": "https://github.com/luozhihua/grunt-sublime"
+  "homepage": "https://github.com/luozhihua/sublproject",
+  "dependencies": {
+    "async": "~0.9.0",
+    "rc": "~0.5.0",
+    "open": "~0.0.5",
+    "optimist": "~0.6.1"
+  }
 }

@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var child_process = require('child_process');
+
+var index = path.resolve(__dirname, '../src/index.js')
+
+child_process.fork(index);
