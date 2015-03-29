@@ -1,10 +1,10 @@
 {
   "name": "sublproject",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "preferGlobal": "true",
   "description": "Init current nodejs project for sublime-text, for easily to open it.",
   "main": "index.js",
-  "os":["linux"],
+  "os":["darwin", "linux"],
   "bin": {
     "sublproject": "./bin/sublproject"
   },
