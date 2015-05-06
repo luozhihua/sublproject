@@ -22,3 +22,5 @@ npm i -g sublproject
 cd ./{project_dir} && sublproject
 ```
 This commands will create file '{project}.sublime-project' in your project directory, and then will open this project in Sublime Text Editor automaticly.
+
+Default, {project} will read the `name` field from `package.json` or `bower.json`, if `package.json` and `bower.json` are both not exists, {project} set as current directory name.
