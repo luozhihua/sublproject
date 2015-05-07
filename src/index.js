@@ -30,11 +30,13 @@ if (!fs.existsSync(projFilePath)) {
         "folders" : [
             {
                 "follow_symlinks": true,
-                "file_exclude_patterns": [".fuse_hidden*"],
+                "file_exclude_patterns": [
+                    ".fuse_hidden*"
+                ],
                 "path": "."
             }
         ]
-    });
+    }, 0, 4);
 
     fs.writeFileSync(projFilePath, projContent);
 }
