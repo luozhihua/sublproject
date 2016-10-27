@@ -28,10 +28,10 @@ Default, {project} will read the `name` field from `package.json` or `bower.json
 
 # Options
 
-**-h, --help**           help && usage.
-**-v, --version**        Display sublproject versions.
-**-f, --exclude_files**  Patterns to exclude files.
-**-d, --exclude_dirs**   Patterns to exclude directories.
+- **-h, --help**           help && usage.
+- **-v, --version**        Display sublproject versions.
+- **-f, --exclude_files**  Patterns to exclude files.
+- **-d, --exclude_dirs**   Patterns to exclude directories.
 
 
 # Exclude Files & Folders
