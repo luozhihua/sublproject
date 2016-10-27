@@ -26,7 +26,7 @@ if (argv.help) {
   optimist.showHelp();
   process.exit(0);
 } else if (argv.v) {
-  console.log('sublproject version: ' + JSON.parse(fs.readFileSync('../package.json')).version);
+  console.log('sublproject version: ' + JSON.parse(fs.readFileSync('./package.json')).version);
   process.exit(0);
 } else if (argv.cliconfigonly) {
   var deepExtend = require('deep-extend');
