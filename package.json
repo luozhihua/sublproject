@@ -6,7 +6,9 @@
   "main": "index.js",
   "os":["darwin", "linux"],
   "bin": {
-    "sublproject": "./bin/sublproject"
+    "sublproject": "./bin/sublproject",
+    "sublp": "./bin/sublproject",
+    "stp": "./bin/sublproject"
   },
   "scripts": {
     "test": "NODE_ENV=test bash test/index.sh && NODE_ENV=test cd text && node main.js"

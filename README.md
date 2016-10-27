@@ -19,15 +19,28 @@ npm i -g sublproject
 
 # Usage
 ```
-cd ./{project_dir} && sublproject
+cd ./{project_dir}
+sublproject --ecclude_dirs cache,.tmp --exclude_files *.log,*.ini
 ```
 This commands will create file '{project}.sublime-project' in your project directory, and then will open this project in Sublime Text Editor automaticly.
 
 Default, {project} will read the `name` field from `package.json` or `bower.json`, if `package.json` and `bower.json` are not exists both, {project} will be the current directory name.
 
+# Options
+
+**-h, --help**           help && usage.
+**-v, --version**        Display sublproject versions.
+**-f, --exclude_files**  Patterns to exclude files.
+**-d, --exclude_dirs**   Patterns to exclude directories.
+
+
 # Exclude Files & Folders
 
-Some times, You wan't see some files or Folder in left sidebar of Sublime Text, you can exclude them in the file `*.sublime-project`:
+Some times, You wan't see some files or Folders in left sidebar of Sublime Text, you can exclude them use commands:
+
+`-f *.log,*.ini -d .cache_dir,.git`
+
+or edit the project file `*.sublime-project`:
 
 ```json
 // content of *.sublime-project

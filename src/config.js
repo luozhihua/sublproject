@@ -1,4 +1,3 @@
-var rc = require('rc');
 var optimist = require('optimist');
 var path = require('path');
 var fs = require('fs');
@@ -13,9 +12,14 @@ function getUserHome() {
 
 // Works for now but should be moved to bin/sublproject
 var argv = optimist
-  .usage('sublproject [-v]')
+  .usage('sublproject [-v][-f=*.log,.*][-d=cache,node_modules]')
   .alias('v', 'version')
+  .alias('h', 'help')
+  .alias('f', 'exclude_files')
+  .alias('d', 'exclude_dirs')
   .describe('v', 'Display sublproject versions')
+  .describe('f', 'Patterns to exclude files')
+  .describe('d', 'Patterns to exclude directories')
   .argv;
 
 if (argv.help) {
@@ -31,5 +35,5 @@ if (argv.help) {
     argv
   ]);
 } else {
-  module.exports = rc('sublproject', defaultConfig, argv);
+  module.exports = argv;
 }
