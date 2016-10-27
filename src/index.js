@@ -33,6 +33,9 @@ if (!fs.existsSync(projFilePath)) {
                 "file_exclude_patterns": [
                     ".fuse_hidden*"
                 ],
+                "folder_exclude_patterns": [
+                    "hide_node_modules"
+                ],
                 "path": "."
             }
         ]

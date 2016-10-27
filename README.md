@@ -17,10 +17,30 @@ or
 npm i -g sublproject
 ```
 
-#Usage
+# Usage
 ```
 cd ./{project_dir} && sublproject
 ```
 This commands will create file '{project}.sublime-project' in your project directory, and then will open this project in Sublime Text Editor automaticly.
 
-Default, {project} will read the `name` field from `package.json` or `bower.json`, if `package.json` and `bower.json` are both not exists, {project} set as current directory name.
+Default, {project} will read the `name` field from `package.json` or `bower.json`, if `package.json` and `bower.json` are not exists both, {project} will be the current directory name.
+
+# Exclude Files & Folders
+
+Some times, You wan't see some files or Folder in left sidebar of Sublime Text, you can exclude them in the file `*.sublime-project`:
+
+```json
+// content of *.sublime-project
+"folders" : [
+    {
+        "follow_symlinks": true,
+        "file_exclude_patterns": [
+            ".fuse_hidden*" // patterns to exclude file.
+        ],
+        "folder_exclude_patterns": [
+            "hide_node_modules" // patterns to exclude folder.
+        ],
+        "path": "."
+    }
+]
+```
